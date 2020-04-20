@@ -1,0 +1,21 @@
+{% extends 'post/base.html' %}
+{% load bootstrap4 %}
+{% block title %}Sign up to JustPostIt{% endblock %}
+{% block content %}
+<section>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-8">
+				<h1 class="text-center">SIGN-UP</h1>
+				<form method="post" novalidate class="form" autocomplete="off">
+				  {% csrf_token %}
+				  {% bootstrap_form form %}
+				  {% buttons %}
+				  	<button type="submit" class="btn btn-success">Submit</button>
+				  {% endbuttons %}
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
